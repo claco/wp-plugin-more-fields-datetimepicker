@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: More Fields: Date picker field type
-Plugin URI: http://labs.dagensskiva.com/
-Description: Adds a date picker to the available field types
+Plugin Name: More Fields: DateTime picker field type
+Plugin URI: http://github.com/claco/wp-plugin-more-fields-datetimepicker/
+Description: Adds a datetime picker to the available field types
 Version: 0.1
-Author: Henrik Melin
+Author: Christopher H. Laco, Henrik Melin
 */
 
 function mf_datepicker_init($types) {
