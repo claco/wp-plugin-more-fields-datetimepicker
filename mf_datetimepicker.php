@@ -7,9 +7,9 @@ Version: 0.1
 Author: Christopher H. Laco, Henrik Melin
 */
 
-function mf_datepicker_init($types) {
+function mf_datetimepicker_init($types) {
 		$language = ($a = substr(WPLANG, 0, 2)) ? $a : 'en';
-		$select->title = 'Datepicker';
+		$select->title = 'DateTimePicker';
 		$select->html_before = "
 		  <script>
 			jQuery(document).ready(function(){
@@ -29,10 +29,10 @@ function mf_datepicker_init($types) {
 		$types[]  = $select;
 		return $types;
 }
-add_filter('more_fields_field_types', 'mf_datepicker_init');
+add_filter('more_fields_field_types', 'mf_datetimepicker_init');
 
 // Include the JQuery UI and load the CSS for the datepicker.
-function mf_datepicker_head() {
+function mf_datetimepicker_head() {
 	// Pre-2.6 compatibility
 	if ( !defined('WP_CONTENT_URL') )
 		define( 'WP_CONTENT_URL', get_option('siteurl') . '/wp-content');
@@ -41,6 +41,6 @@ function mf_datepicker_head() {
 	echo "<link rel='stylesheet' href='" . $plugin_url . "/ui.datepicker.more-fields.css' type='text/css' media='all' />";
 
 }
-add_action('admin_head', 'mf_datepicker_head');
+add_action('admin_head', 'mf_datetimepicker_head');
 
 ?>
